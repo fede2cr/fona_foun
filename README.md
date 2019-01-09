@@ -7,9 +7,10 @@ Nunca me han gustado los teléfonos "inteligentes", y me parece que son la peor 
 
 
 ## TODO:
-- [x] Batería 18650
-- [x] Pantalla Feather OLED
-- [ ] Fona demo en pantalla OLED
+- [√] Batería 18650
+- [x] Pantalla Feather OLED: No se puede con At32u4
+- [ ] Placa administradora por serial
+- [ ] FONAtest en pantalla OLED
 - [ ] Ring en parlante
 - [ ] Medir batería
 - [ ] Aceptar llamada
@@ -28,3 +29,6 @@ Nunca me han gustado los teléfonos "inteligentes", y me parece que son la peor 
 - [ ] Uber
 - [ ] Telegram
 - [ ] Tether de 3G a wifi
+
+## Problemas:
+- Micros pequeñas: La Atmel 32u4 que tiene la Fona, tiene funcionalidades interesantes como HID USB, sin embargo no tiene suficiente capacidad para manejar tanto la librería de Fona, como la librería de OLED, por lo cual es necesario utilizar una micro con más poder, como una m0, m4 o STM32, la cual controla tanto el Fona como la pantalla, por medio de comandos seriales.
